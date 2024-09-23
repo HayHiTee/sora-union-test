@@ -1,1 +1,1 @@
-export const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL
+export const BACKEND_BASE_URL = 'https://sora-union-test-lemon.vercel.app/'
