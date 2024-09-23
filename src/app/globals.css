@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --file-background:#0a53be;
+  --file-color:#ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +26,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+div select{
+  color: #0a0a0a;
+  margin:10px;
+}
+
+.file-title{
+  margin: 10px;
+  background: var(--file-background);
 }
