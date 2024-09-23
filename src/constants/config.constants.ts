@@ -1,1 +1,1 @@
-export const BACKEND_BASE_URL = 'https://sora-union-test-lemon.vercel.app/'
+export const BACKEND_BASE_URL = 'https://sora-union-test-lemon.vercel.app'
