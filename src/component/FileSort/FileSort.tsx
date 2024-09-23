@@ -20,8 +20,8 @@ const FileSort =  ()=>{
                  data = await res.json()
             }
 
-            data.sort(function(a,b){
-                return new Date(a.createdAt) - new Date(b.createdAt);
+            data.sort(function(a:IDataType,b:IDataType){
+                return new Date(a.createdAt).valueOf() - new Date(b.createdAt).valueOf();
             })
             setFiles(data)
         }
@@ -31,26 +31,26 @@ const FileSort =  ()=>{
     }, []);
 
 
-    const handleOnChangeSelect = (e) => {
+    const handleOnChangeSelect = (e:any) => {
         const val = e.target.value
         const newFiles = [...files]
         switch (val) {
             case 'created-by-ascendent':
-                newFiles.sort(function(a,b){
-                    return new Date(a.createdAt) - new Date(b.createdAt);
+                newFiles.sort(function(a: IDataType,b:IDataType){
+                    return new Date(a.createdAt).valueOf() - new Date(b.createdAt).valueOf();
                 })
                 setFiles(newFiles)
                 break;
 
             case 'filename-by-ascendent':
-                newFiles.sort(function(a,b){
+                newFiles.sort(function(a:IDataType,b:IDataType){
                     return a.fileName.localeCompare(b.fileName, undefined, {numeric: true, sensitivity: 'base'});
                 })
                 setFiles(newFiles)
                 break;
 
             case 'filename-by-descendent':
-                newFiles.sort(function(a,b){
+                newFiles.sort(function(a:IDataType,b:IDataType){
                     return b.fileName.localeCompare(a.fileName, undefined, {numeric: true, sensitivity: 'base'});
                 })
                 setFiles(newFiles)
