@@ -2,7 +2,8 @@
 import {NextResponse} from "next/server";
 import {promises as fs} from "fs";
 
-export async function GET(req: Request){
+
+export async function GET(){
     // Read csv file
     const file = await fs.readFile(process.cwd() + '/src/app/api/data/data.csv', 'utf8');
 
